@@ -789,17 +789,33 @@ h1 {
   }
 
   .nav-links {
+    width: 100%;
     justify-content: flex-start;
     flex-wrap: wrap;
+    row-gap: 10px;
+    padding: 10px 14px;
   }
 
   .nav-actions {
     width: 100%;
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
     padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  .hero-visual::before {
+    inset: -30px -10px;
+  }
+
+  .hero-graphic {
+    width: min(100%, 720px);
+    transform: none;
   }
 
   .cta {
@@ -829,8 +845,40 @@ h1 {
     padding-right: 6vw;
   }
 
+  .brand-logo {
+    width: 104px;
+    height: 104px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    column-gap: 14px;
+    font-size: 0.95rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+
+  .nav-actions {
+    justify-content: space-between;
+  }
+
+  .hero {
+    gap: 28px;
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 6vw + 1rem, 2.8rem);
+  }
+
+  .lead {
+    font-size: clamp(1.15rem, 2.8vw + 0.7rem, 1.5rem);
+  }
+
   .hero-actions {
     width: 100%;
+    gap: 12px;
   }
 
   .hero-actions .btn {
@@ -838,7 +886,89 @@ h1 {
     justify-content: center;
   }
 
+  .hero-visual::before {
+    inset: -20px -10px;
+  }
+
+  .hero-graphic {
+    width: min(100%, 520px);
+    transform: none;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    margin-bottom: 26px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .pill-grid span {
+    font-size: 0.9rem;
+  }
+
   .contact-form__card {
     padding: 24px;
+  }
+
+  .checkbox {
+    align-items: flex-start;
+  }
+
+  .form-actions {
+    justify-content: center;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav-links {
+    padding: 10px 12px;
+    border-radius: 18px;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .lang-menu {
+    width: 100%;
+  }
+
+  .nav .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lang-toggle {
+    width: 100%;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .lang-dropdown {
+    width: 100%;
+  }
+
+  .hero-actions {
+    margin: 28px 0 20px;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .contact-form__card {
+    padding: 20px;
   }
 }
